@@ -31,10 +31,10 @@ module.exports = {
         if (houses[index].price === 0 && type === 'minus'){
             res.status(400).send("Man, that house is CHEAP! Can't be any cheaper though.")
         } else if (type === 'plus'){
-            houses[index].price + 10000
+            houses[index].price =+ 10000
             res.status(200).send(houses)
         } else if (type === 'minus'){
-            houses[index].price - 10000
+            houses[index].price =- 10000
             res.status(200).send(houses)
         }
     }
